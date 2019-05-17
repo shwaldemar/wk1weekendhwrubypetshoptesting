@@ -59,7 +59,16 @@ def pets_by_breed(pet_shop, breed)
   return pet_breed_no_array
 end
 
-# def test_all_pets_by_breed__not_found
-#   pets = pets_by_breed(@pet_shop, "Dalmation")
-#   assert_equal(0, pets.count)
+#10.
+def find_pet_by_name(pet_shop, name)
+  for pet in pet_shop[:pets]
+    if pet[:name] === name
+      return pet
+    end
+  end
+end
+
+# def test_find_pet_by_name__returns_pet
+#   pet = find_pet_by_name(@pet_shop, "Arthur")
+#   assert_equal("Arthur", pet[:name])
 # end
