@@ -78,7 +78,18 @@ def find_pet_by_name(pet_shop, name)
   return nil
 end
 
-# def test_find_pet_by_name__returns_nil
-#   pet = find_pet_by_name(@pet_shop, "Fred")
+#12.
+def find_pet_by_name(pet_shop, name)
+  for pet in pet_shop[:pets]
+  if pet[:name] === name
+      return pet
+    end
+  end
+  return nil
+end
+
+# def test_remove_pet_by_name
+#   remove_pet_by_name(@pet_shop, "Arthur")
+#   pet = find_pet_by_name(@pet_shop,"Arthur")
 #   assert_nil(pet)
 # end
