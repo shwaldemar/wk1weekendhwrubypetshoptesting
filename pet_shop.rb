@@ -45,3 +45,21 @@ def pets_by_breed(pet_shop, breed)
 
   return pet_breed_no_array
 end
+
+#9.
+def pets_by_breed(pet_shop, breed)
+  pet_breed_no_array = []
+
+  for pet in pet_shop[:pets]
+    if pet[:breed] === breed
+      pet_breed_no_array.push(pet)
+    end
+  end
+
+  return pet_breed_no_array
+end
+
+# def test_all_pets_by_breed__not_found
+#   pets = pets_by_breed(@pet_shop, "Dalmation")
+#   assert_equal(0, pets.count)
+# end
