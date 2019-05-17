@@ -8,3 +8,7 @@ end
   #   sum = total_cash(@pet_shop)
   #   assert_equal(1000, sum)
   # end
+
+  def total_cash(totalcash)
+    return totalcash[:admin][:total_cash]
+  end
