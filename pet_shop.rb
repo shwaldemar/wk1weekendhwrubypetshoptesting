@@ -28,8 +28,15 @@ def increase_pets_sold(add, amount)
   return add[:admin][:pets_sold] += amount
 end
 
-# def test_increase_pets_sold
-#   increase_pets_sold(@pet_shop,2)
-#   sold = pets_sold(@pet_shop)
-#   assert_equal(2, sold)
+#7.
+def stock_count(stock)
+return  stock[:pets].length
+end
+
+#8.
+def pets_by_breed()
+end
+# def test_all_pets_by_breed__found
+#   pets = pets_by_breed(@pet_shop, "British Shorthair")
+#   assert_equal(2, pets.count)
 # end
