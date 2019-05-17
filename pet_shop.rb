@@ -19,8 +19,9 @@ def add_or_remove_cash(minus, amount)
 end
 
 # 5.
-# def pets_sold()
-# end
+def pets_sold(nopetssold)
+  return nopetssold[:admin][:pets_sold]
+end
 
 # def test_pets_sold
 #   sold = pets_sold(@pet_shop)
