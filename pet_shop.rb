@@ -9,12 +9,20 @@ def total_cash(totalcash)
 end
 
 #3.
-# def test_add_or_remove_cash__add
-#   add_or_remove_cash(@pet_shop,10)
-#   cash = total_cash(@pet_shop)
-#   assert_equal(1010, cash)
+def add_or_remove_cash(add, amount)
+  return add[:admin][:total_cash] += amount
+end
+
+# 4.
+def add_or_remove_cash(minus, amount)
+    return minus[:admin][:total_cash] += amount
+end
+
+# 5.
+# def pets_sold()
 # end
 
-def add_or_remove_cash(add, tenner)
-  return add[:admin][:total_cash] += tenner
-end
+# def test_pets_sold
+#   sold = pets_sold(@pet_shop)
+#   assert_equal(0, sold)
+# end
