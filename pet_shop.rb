@@ -1,6 +1,6 @@
 #1.
 def pet_shop_name(shopname)
-return shopname[:name]
+  return shopname[:name]
 end
 
 #2.
@@ -15,7 +15,7 @@ end
 
 # 4.
 def add_or_remove_cash(minus, amount)
-    return minus[:admin][:total_cash] += amount
+  return minus[:admin][:total_cash] += amount
 end
 
 # 5.
@@ -30,13 +30,18 @@ end
 
 #7.
 def stock_count(stock)
-return  stock[:pets].length
+  return  stock[:pets].length
 end
 
 #8.
-def pets_by_breed()
+def pets_by_breed(pet_shop, breed)
+  pet_breed_no_array = []
+
+  for pet in pet_shop[:pets]
+    if pet[:breed] === breed
+      pet_breed_no_array.push(pet)
+    end
+  end
+
+  return pet_breed_no_array
 end
-# def test_all_pets_by_breed__found
-#   pets = pets_by_breed(@pet_shop, "British Shorthair")
-#   assert_equal(2, pets.count)
-# end
