@@ -80,17 +80,22 @@ end
 
 #12.
 def remove_pet_by_name(pet_shop, name)
-  for pet in pet_shop[:pets]
-  if pet[:name] === name
+pet = find_pet_by_name(pet_shop, name)
       pet_shop[:pets].delete(pet)
-    end
-  end
 end
 
-
-
-# def test_remove_pet_by_name
-#   remove_pet_by_name(@pet_shop, "Arthur")
-#   pet = find_pet_by_name(@pet_shop,"Arthur")
-#   assert_nil(pet)
+# def remove_pet_by_name(pet_shop, name)
+#   for pet in pet_shop[:pets]
+#   if pet[:name] === name
+#       pet_shop[:pets].delete(pet)
+#     end
+#   end
 # end
+
+#13.
+def add_pet_to_stock(pet_shop, count)
+  total_stock_before = pet_shop[:pets].length
+  pet_shop[:pets] << {:name => "gordon", :species => "gopher", :breed => "menace", :price => 150}
+  total_stock_after = pet_shop[:pets].length
+  count = total_stock_after - total_stock_before
+end
