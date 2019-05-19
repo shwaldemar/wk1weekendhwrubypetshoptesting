@@ -71,7 +71,7 @@ end
 #11.
 def find_pet_by_name(pet_shop, name)
   for pet in pet_shop[:pets]
-  if pet[:name] === name
+    if pet[:name] === name
       return pet
     end
   end
@@ -80,8 +80,8 @@ end
 
 #12.
 def remove_pet_by_name(pet_shop, name)
-pet = find_pet_by_name(pet_shop, name)
-      pet_shop[:pets].delete(pet)
+  pet = find_pet_by_name(pet_shop, name)
+  pet_shop[:pets].delete(pet)
 end
 
 # def remove_pet_by_name(pet_shop, name)
@@ -98,4 +98,9 @@ def add_pet_to_stock(pet_shop, count)
   pet_shop[:pets] << {:name => "gordon", :species => "gopher", :breed => "menace", :price => 150}
   total_stock_after = pet_shop[:pets].length
   count = total_stock_after - total_stock_before
+end
+
+#14.
+def customer_cash(cash)
+  return cash[:cash]
 end
