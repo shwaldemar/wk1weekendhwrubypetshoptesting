@@ -84,6 +84,10 @@ def remove_pet_by_name(pet_shop, name)
   pet_shop[:pets].delete(pet)
 end
 
+def add_or_remove_cash(minus, amount)
+  return minus[:admin][:total_cash] += amount
+end
+
 # def remove_pet_by_name(pet_shop, name)
 #   for pet in pet_shop[:pets]
 #   if pet[:name] === name
@@ -103,4 +107,16 @@ end
 #14.
 def customer_cash(cash)
   return cash[:cash]
+  return minus[:admin][:total_cash] += amount
 end
+
+#15.
+def remove_customer_cash(customer, amount)
+  customer_toamend = customer_cash(customer)
+  return customer[:cash] -= amount
+end
+# def test_remove_customer_cash
+#   customer = @customers[0]
+#   remove_customer_cash(customer, 100)
+#   assert_equal(900, customer[:cash])
+# end
